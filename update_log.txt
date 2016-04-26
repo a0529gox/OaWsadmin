@@ -1,0 +1,9 @@
+20160425 updated by Sky Liu (v1.1.2):
+	部屬時只要有ear好了就執行，不用照著一定順序
+	部屬完成後可再重複執行(原先只能執行一次)	
+
+20150831 updated by Sky Liu (v1.1.1):
+	修正Was路徑中有空格會造成bat檔執行錯誤的問題
+	
+20150831 updated by Sky Liu (v1.1):
+	AutoDeploy不再彈出cmd，改讀cmd的output顯示訊息
