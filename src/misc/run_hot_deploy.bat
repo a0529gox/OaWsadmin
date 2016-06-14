@@ -17,10 +17,10 @@ echo msg.starting
 call "%WAS_HOME%\bin\wsadmin" -f %PY_PATH% %WORKSPACE_PATH% %TO_DEPLOYS%
 
 echo msg.server.closing
-rem call "%WAS_HOME%\bin\stopServer.bat" %SERVER_NAME%
+call "%WAS_HOME%\bin\stopServer.bat" %SERVER_NAME%
 
 echo msg.server.starting
-rem call "%WAS_HOME%\bin\startServer.bat" %SERVER_NAME%
+call "%WAS_HOME%\bin\startServer.bat" %SERVER_NAME%
 
 echo msg.deploy.done
 

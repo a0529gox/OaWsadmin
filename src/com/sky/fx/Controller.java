@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import com.sky.bat.BatRunner;
 import com.sky.listener.HotDeployMessageListener;
 import com.sky.listener.MessageListener;
+import com.sky.listener.TimekeeperListener;
 import com.sky.util.FileGetter;
 
 import javafx.event.ActionEvent;
@@ -67,11 +68,14 @@ public class Controller implements Initializable {
 	CheckBox qiyCb;
 	
 	List<CheckBox> cbs = null;
-	
+
 	@FXML
 	Label messageLb;
 	@FXML
+	Label timekeeperLb;
+	@FXML
 	public Button deployBtn;
+	public TimekeeperListener timekeeperListener;	
 	//Tab HotDeploy END
 
 
@@ -130,6 +134,7 @@ public class Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle res) {
 		hotDeployMsgListener = new HotDeployMessageListener(messageLb, this);
 		autostartMsgListener = new MessageListener(asMessageLb, this);
+		timekeeperListener = new TimekeeperListener(timekeeperLb);
 		
 		//Tab HotDeploy
 		initCbs();
@@ -184,6 +189,7 @@ public class Controller implements Initializable {
 			String toDeploy = toDeploySb.toString();
 			if (toDeploy.length() > 0) {
 				deployBtn.setDisable(true);
+				timekeeperListener.start();
 
 				String pyPath = FileGetter.getFile("hot_deploy.py");
 				

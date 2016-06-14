@@ -20,6 +20,7 @@ public class HotDeployMessageListener extends MessageListener {
 	void onSucceededCallback() {
 		super.onSucceededCallback();
 		ctrl.deployBtn.setDisable(false);
+		ctrl.timekeeperListener.stop();
 	}
 
 

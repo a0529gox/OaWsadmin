@@ -1,3 +1,10 @@
+20160614 updated by Sky Liu (v1.2):
+	增加計時器
+
+20160512 updated by Sky Liu (v1.1.3):
+	修正deploy完沒有重開server的問題
+	更正顯示訊息會有"qiqix-ear ear"的問題
+
 20160425 updated by Sky Liu (v1.1.2):
 	部屬時只要有ear好了就執行，不用照著一定順序
 	部屬完成後可再重複執行(原先只能執行一次)	

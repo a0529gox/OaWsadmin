@@ -28,7 +28,7 @@ public class Main extends Application {
 
 			Scene scene = new Scene(fxmlRoot);
 
-			primaryStage.setTitle("OaWsadmin v1.1.2");
+			primaryStage.setTitle("OaWsadmin v1.2");
 
 			primaryStage.setScene(scene);
 
